@@ -1,13 +1,17 @@
 import os
 from datetime import datetime
+
+from dotenv import load_dotenv
 from exif import Image
 
-IMAGES_DIRECTORY = 'images'
-TIMESTAMP = 'datetime_original'
-TIMESTAMP_FORMAT = '%Y:%m:%d %H:%M:%S'
+load_dotenv()
+
+IMAGES_DIR = os.getenv('IMAGES_DIR')
+TIMESTAMP = os.getenv('TIMESTAMP')
+TIMESTAMP_FORMAT = os.getenv('TIMESTAMP_FORMAT')
 DESIRED_TIMESTAMP = '2022:05:28 14:00:00'
 
-image_paths = [os.path.join(IMAGES_DIRECTORY, entry) for entry in os.listdir(IMAGES_DIRECTORY) if os.path.isfile(os.path.join(IMAGES_DIRECTORY, entry))]
+image_paths = [os.path.join(IMAGES_DIR, entry) for entry in os.listdir(IMAGES_DIR) if os.path.isfile(os.path.join(IMAGES_DIR, entry))]
 
 image_timestamps = {}
 
