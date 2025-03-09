@@ -16,6 +16,9 @@ delta = timedelta(days=DELTA_DAYS, hours=DELTA_HOURS, minutes=DELTA_MINUTES, sec
 
 image_paths = [os.path.join(IMAGES_DIRECTORY, entry) for entry in os.listdir(IMAGES_DIRECTORY) if os.path.isfile(os.path.join(IMAGES_DIRECTORY, entry))]
 
+# Create output directory if it doesn't exist
+os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
+
 for path in image_paths:
     print(path)
     with open(path, 'rb') as file:
