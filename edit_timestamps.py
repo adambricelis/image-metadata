@@ -9,7 +9,7 @@ load_dotenv()
 IMAGES_DIR = os.getenv('IMAGES_DIR')
 OUTPUT_DIR = os.getenv('OUTPUT_DIR')
 TIMESTAMP = os.getenv('TIMESTAMP')
-TIMESTAMP_FORMAT = os.getenv('TIMESTAMP_FORMAT')
+TIMESTAMP_FORMAT = os.getenv('TIMESTAMP_FORMAT').encode().decode('unicode_escape')
 
 # Difference between desired and current timestamps
 DELTA_DAYS = 791

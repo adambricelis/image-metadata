@@ -8,7 +8,7 @@ load_dotenv()
 
 IMAGES_DIR = os.getenv('IMAGES_DIR')
 TIMESTAMP = os.getenv('TIMESTAMP')
-TIMESTAMP_FORMAT = os.getenv('TIMESTAMP_FORMAT')
+TIMESTAMP_FORMAT = os.getenv('TIMESTAMP_FORMAT').encode().decode('unicode_escape')
 DESIRED_TIMESTAMP = '2022:05:28 14:00:00'
 
 image_paths = [os.path.join(IMAGES_DIR, entry) for entry in os.listdir(IMAGES_DIR) if os.path.isfile(os.path.join(IMAGES_DIR, entry))]
