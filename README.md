@@ -1,6 +1,8 @@
 # Image Metadata
 
-Python scripts for retrieving and modifying image metadata in bulk.
+Python scripts to read and edit image metadata in bulk.
+
+When a photographer takes pictures of my family, they often forget to set the date and time on their camera. If I import those pictures into Google Photos, they show up at the wrong date and time because their timestamps are incorrect. I created these scripts to fix the timestamps on a set of photos from a photoshoot.
 
 ## Getting started
 
@@ -14,7 +16,10 @@ Python scripts for retrieving and modifying image metadata in bulk.
 1. Create .env file
     1. Copy [example.env](example.env) to .env
     1. (Optional) Modify environment variables to suit your use case
-1. Run scripts
+
+## Usage guide
+
+Run `python <script> -h` for help
 
 ## Contribution Policy
 
